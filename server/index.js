@@ -23,6 +23,8 @@ const PORT = process.env.PORT || 8080;
 // Use student routes
 app.use("/api", studentRoutes);
 
+app.options('*', cors());
+
 // Connect to MongoDB and start the server
 mongoose
   .connect(process.env.MONGODB_URI, {
