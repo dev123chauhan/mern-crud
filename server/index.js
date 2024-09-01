@@ -9,9 +9,13 @@ const studentRoutes = require("./routes/studentRoutes");
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: 'https://mern-crud-client-lac.vercel.app' // Allow this specific origin
-}));
+app.use(
+  cors({
+    origin: "https://mern-crud-client-lac.vercel.app",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true, // Allow this specific origin
+  })
+);
 app.use(express.json());
 
 const PORT = process.env.PORT || 8080;
