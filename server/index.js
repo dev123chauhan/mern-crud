@@ -9,21 +9,13 @@ const studentRoutes = require("./routes/studentRoutes");
 dotenv.config();
 
 const app = express();
-app.use(
-  cors({
-    origin: "https://mern-crud-client-kappa.vercel.app",
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true, // Allow this specific origin
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 8080;
 
 // Use student routes
 app.use("/api", studentRoutes);
-
-app.options('*', cors());
 
 // Connect to MongoDB and start the server
 mongoose
