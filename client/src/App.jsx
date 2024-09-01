@@ -4,7 +4,7 @@ import { MdEdit, MdRestoreFromTrash } from "react-icons/md";
 import Swal from 'sweetalert2';
 import Formtable from './components/Formtable';
 
-axios.defaults.baseURL = "https://mern-crud-server-rho.vercel.app/api";
+axios.defaults.baseURL = "https://mern-crud-server-sigma.vercel.app/api";
 
 function App() {
   const [addSection, setAddSection] = useState(false);

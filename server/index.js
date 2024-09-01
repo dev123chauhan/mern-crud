@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 app.use(
   cors({
-    origin: "https://mern-crud-client-lac.vercel.app",
+    origin: "https://mern-crud-server-sigma.vercel.app",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true, // Allow this specific origin
   })
